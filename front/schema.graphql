@@ -1,0 +1,32 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    subscription: Subscription
+}
+
+type Control {
+    dev: Float
+    devOutTotal: Float
+    name: String
+    quality: Float
+}
+
+type Feature {
+    controls: [[Control]]
+    name: String
+    quality: Float
+}
+
+type Part {
+    features: [Feature]
+    name: String
+}
+
+type Query {
+    parts: [Part]
+}
+
+type Subscription {
+    parts: [Part]
+}
